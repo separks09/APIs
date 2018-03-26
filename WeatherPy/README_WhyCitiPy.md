@@ -26,7 +26,7 @@ cities_df["Country"].nunique()
 
 
 
-    113
+    109
 
 
 
@@ -54,17 +54,17 @@ I would expect to see more cities from the largest countries, as well as those c
 
 
 ```python
-rank = ['3rd','8th','1st','17th','6th','2nd','11th','unk','4th','14th']
-mass = ['1st','3rd','2nd','5th','6th','unk','4th','8th','unk','14th']
+rank = ['3rd','8th','1st','6th','17th','11th','16th','24th','7th','2nd']
+mass = ['1st','3rd','2nd','6th','5th','4th','7th','8th','62nd','15th']
 x = 10
-for x in range(103):
+for x in range(99):
     #coastlines.append('unk')
     rank.append('unk')
     mass.append('unk')
     x = x + 1
 #coastal_df["Coastline (in miles)"] = coastlines
 coastal_df["Rank in World (coastline)"] = rank
-coastal_df["Rank in World (mass)"] = mass
+coastal_df["Rank in World (area)"] = mass
 coastal_df.head(10) 
 ```
 
@@ -92,7 +92,7 @@ coastal_df.head(10)
       <th>Cities in Random</th>
       <th>Continent</th>
       <th>Rank in World (coastline)</th>
-      <th>Rank in World (mass)</th>
+      <th>Rank in World (area)</th>
     </tr>
     <tr>
       <th>Country</th>
@@ -112,66 +112,66 @@ coastal_df.head(10)
     </tr>
     <tr>
       <th>US</th>
-      <td>48</td>
+      <td>43</td>
       <td>North America</td>
       <td>8th</td>
       <td>3rd</td>
     </tr>
     <tr>
       <th>CA</th>
-      <td>36</td>
+      <td>31</td>
       <td>North America</td>
       <td>1st</td>
       <td>2nd</td>
     </tr>
     <tr>
-      <th>BR</th>
-      <td>28</td>
-      <td>South America</td>
-      <td>17th</td>
-      <td>5th</td>
-    </tr>
-    <tr>
       <th>AU</th>
-      <td>18</td>
+      <td>26</td>
       <td>Oceania</td>
       <td>6th</td>
       <td>6th</td>
     </tr>
     <tr>
-      <th>ID</th>
-      <td>15</td>
-      <td>Asia</td>
-      <td>2nd</td>
-      <td>unk</td>
+      <th>BR</th>
+      <td>24</td>
+      <td>South America</td>
+      <td>17th</td>
+      <td>5th</td>
     </tr>
     <tr>
       <th>CN</th>
-      <td>15</td>
+      <td>17</td>
       <td>Asia</td>
       <td>11th</td>
       <td>4th</td>
     </tr>
     <tr>
+      <th>IN</th>
+      <td>15</td>
+      <td>Asia</td>
+      <td>16th</td>
+      <td>7th</td>
+    </tr>
+    <tr>
       <th>AR</th>
-      <td>12</td>
+      <td>13</td>
       <td>South America</td>
-      <td>unk</td>
+      <td>24th</td>
       <td>8th</td>
     </tr>
     <tr>
-      <th>PH</th>
-      <td>11</td>
-      <td>Asia</td>
-      <td>4th</td>
-      <td>unk</td>
+      <th>NO</th>
+      <td>12</td>
+      <td>Europe</td>
+      <td>7th</td>
+      <td>62nd</td>
     </tr>
     <tr>
-      <th>MX</th>
+      <th>ID</th>
       <td>10</td>
-      <td>North America</td>
-      <td>14th</td>
-      <td>14th</td>
+      <td>Asia</td>
+      <td>2nd</td>
+      <td>15th</td>
     </tr>
   </tbody>
 </table>
@@ -190,11 +190,11 @@ coastal_df["Continent"].value_counts()
 
 
     Africa           32
-    Asia             26
-    Europe           20
+    Asia             22
+    Europe           18
     North America    15
-    South America    10
-    Oceania          10
+    South America    11
+    Oceania          11
     Name: Continent, dtype: int64
 
 
